@@ -1,0 +1,276 @@
+<!-- Apni existing index.html ke </body> se just pehle ye code paste karo -->
+
+<style>
+#vyom-ai-button{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:62px;
+    height:62px;
+    border-radius:50%;
+    border:none;
+    background:#ff3b00;
+    color:#fff;
+    font-size:27px;
+    cursor:pointer;
+    z-index:9999;
+    box-shadow:0 8px 30px rgba(0,0,0,.5);
+}
+
+#vyom-ai-chat{
+    display:none;
+    position:fixed;
+    right:25px;
+    bottom:100px;
+    width:360px;
+    max-width:calc(100vw - 30px);
+    height:500px;
+    background:#111;
+    border:1px solid #333;
+    border-radius:15px;
+    overflow:hidden;
+    z-index:9998;
+    box-shadow:0 20px 60px rgba(0,0,0,.7);
+}
+
+.ai-header{
+    background:#181818;
+    padding:18px;
+    border-bottom:1px solid #333;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.ai-header strong{
+    color:#ff3b00;
+}
+
+.ai-close{
+    background:none;
+    border:none;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+}
+
+#ai-messages{
+    height:380px;
+    overflow-y:auto;
+    padding:15px;
+}
+
+.ai-message{
+    padding:10px 13px;
+    margin-bottom:10px;
+    border-radius:10px;
+    max-width:85%;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.ai-user{
+    background:#ff3b00;
+    margin-left:auto;
+}
+
+.ai-bot{
+    background:#242424;
+    color:#ddd;
+}
+
+.ai-input{
+    display:flex;
+    padding:10px;
+    border-top:1px solid #333;
+    gap:8px;
+}
+
+#ai-input{
+    flex:1;
+    background:#222;
+    border:1px solid #333;
+    color:white;
+    padding:12px;
+    border-radius:7px;
+    outline:none;
+}
+
+#ai-send{
+    background:#ff3b00;
+    color:white;
+    border:none;
+    padding:0 16px;
+    border-radius:7px;
+    cursor:pointer;
+}
+
+@media(max-width:500px){
+    #vyom-ai-chat{
+        right:15px;
+        bottom:95px;
+        width:calc(100vw - 30px);
+    }
+
+    #vyom-ai-button{
+        right:18px;
+        bottom:18px;
+    }
+}
+</style>
+
+
+<!-- AI BUTTON -->
+
+<button id="vyom-ai-button" onclick="openVyomAI()">
+    🤖
+</button>
+
+
+<!-- AI CHAT -->
+
+<div id="vyom-ai-chat">
+
+    <div class="ai-header">
+
+        <div>
+            <strong>Vyom AI</strong>
+            <br>
+            <small>Vyom Production Assistant</small>
+        </div>
+
+        <button class="ai-close" onclick="closeVyomAI()">
+            ×
+        </button>
+
+    </div>
+
+
+    <div id="ai-messages">
+
+        <div class="ai-message ai-bot">
+            Hi! 👋 I'm Vyom AI.<br><br>
+            I can help you with video editing,
+            corporate videos, reels, creative content
+            and project enquiries.
+        </div>
+
+    </div>
+
+
+    <div class="ai-input">
+
+        <input
+            id="ai-input"
+            type="text"
+            placeholder="Ask Vyom AI..."
+            onkeydown="if(event.key==='Enter') sendVyomMessage()"
+        >
+
+        <button id="ai-send" onclick="sendVyomMessage()">
+            Send
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function openVyomAI(){
+
+    document.getElementById("vyom-ai-chat").style.display="block";
+
+}
+
+function closeVyomAI(){
+
+    document.getElementById("vyom-ai-chat").style.display="none";
+
+}
+
+
+function addMessage(text,type){
+
+    const messages=document.getElementById("ai-messages");
+
+    const div=document.createElement("div");
+
+    div.className="ai-message "+type;
+
+    div.innerText=text;
+
+    messages.appendChild(div);
+
+    messages.scrollTop=messages.scrollHeight;
+
+}
+
+
+async function sendVyomMessage(){
+
+    const input=document.getElementById("ai-input");
+
+    const message=input.value.trim();
+
+    if(!message) return;
+
+    addMessage(message,"ai-user");
+
+    input.value="";
+
+    addMessage("Thinking...","ai-bot");
+
+    try{
+
+        const response=await fetch(
+            "https://YOUR-BACKEND-URL.com/api/chat",
+            {
+                method:"POST",
+
+                headers:{
+                    "Content-Type":"application/json"
+                },
+
+                body:JSON.stringify({
+                    message:message
+                })
+            }
+        );
+
+        const data=await response.json();
+
+        const messages=document.getElementById("ai-messages");
+
+        messages.lastElementChild.remove();
+
+        if(data.reply){
+
+            addMessage(data.reply,"ai-bot");
+
+        }else{
+
+            addMessage(
+                "Sorry, abhi AI response nahi de pa raha.",
+                "ai-bot"
+            );
+
+        }
+
+    }catch(error){
+
+        const messages=document.getElementById("ai-messages");
+
+        messages.lastElementChild.remove();
+
+        addMessage(
+            "AI server se connection nahi ho pa raha. Please try again.",
+            "ai-bot"
+        );
+
+    }
+
+}
+
+</script>
