@@ -1,0 +1,583 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Vyom Production | Video Editing &amp; Creative Services&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>scroll-behavior: smooth;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: Arial, Helvetica, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #0b0b0b;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* NAVBAR */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>header {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(10, 10, 10, 0.95);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 18px 8%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>z-index: 1000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 1px solid #222;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.logo {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 1px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.logo span {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #ff3c00;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>nav a {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-left: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>nav a:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #ff3c00;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* HERO */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.hero {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 120px 8% 70px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background:</p>
+<p class="p1"><span class="Apple-converted-space">                </span>radial-gradient(circle at 80% 30%, rgba(255, 60, 0, 0.18), transparent 35%),</p>
+<p class="p1"><span class="Apple-converted-space">                </span>#0b0b0b;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.hero-content {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 800px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.hero h1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: clamp(45px, 7vw, 85px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.05;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.hero h1 span {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #ff3c00;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.hero p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #bdbdbd;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 650px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 35px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 14px 28px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #ff3c00;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #111;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-3px);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn-outline {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: transparent;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #555;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-left: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn-outline:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* COMMON SECTION */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>section {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 100px 8%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.section-title {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 55px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.section-title h2 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 42px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.section-title p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #999;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* SERVICES */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.services {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #111;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.service-grid {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(3, 1fr);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.service-card {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #181818;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 35px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #262626;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.service-card:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-8px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #ff3c00;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.service-card .icon {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.service-card h3 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 22px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.service-card p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #999;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* ABOUT */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.about-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: 1fr 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 60px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.about h2 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 45px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.about h2 span {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #ff3c00;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.about p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #aaa;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.about-box {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #171717;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #292929;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.about-box h3 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 55px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #ff3c00;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.about-box p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* PORTFOLIO */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.portfolio {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #111;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.portfolio-grid {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(3, 1fr);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.portfolio-item {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 250px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(</p>
+<p class="p1"><span class="Apple-converted-space">                </span>135deg,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>#222,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>#101010</p>
+<p class="p1"><span class="Apple-converted-space">            </span>);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #292929;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.portfolio-item:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: scale(1.03);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #ff3c00;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.portfolio-item h3 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #aaa;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* CONTACT */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.contact-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 800px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.contact-container h2 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 45px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.contact-container p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #999;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.contact-info {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 30px 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.contact-info p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* FOOTER */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>footer {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #050505;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 30px 8%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-top: 1px solid #222;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>footer p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #777;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* MOBILE */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 800px) {</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>header {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>padding: 15px 5%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>nav {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>section {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>padding: 80px 5%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>.hero {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>padding: 120px 5% 70px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>.hero p {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>font-size: 17px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>.service-grid,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.portfolio-grid,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.about-container {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>grid-template-columns: 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>.about-box {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>padding: 35px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>.btn {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>.btn-outline {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>margin-left: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- NAVBAR --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="logo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Vyom &lt;span&gt;Production&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#home"&gt;Home&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#services"&gt;Services&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#about"&gt;About&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#portfolio"&gt;Portfolio&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#contact"&gt;Contact&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- HERO --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="hero" id="home"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="hero-content"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>We Create&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span&gt;Visual Stories.&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Professional video editing, creative content,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>promotional videos and digital media solutions</p>
+<p class="p1"><span class="Apple-converted-space">                </span>by Vyom Production.</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#portfolio" class="btn"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>View Portfolio</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#contact" class="btn btn-outline"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Contact Us</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- SERVICES --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="services" id="services"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="section-title"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Our Services&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Creative solutions for your visual content.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-grid"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="service-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="icon"&gt;🎬&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Video Editing&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Professional editing for corporate videos,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>social media, events and digital content.</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="service-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="icon"&gt;🎥&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Corporate Videos&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Engaging corporate films, promotional videos</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>and brand communication content.</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="service-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="icon"&gt;📱&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Social Media&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Reels, shorts, promotional creatives and</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>social media video content.</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- ABOUT --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="about" id="about"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="about-container"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>About &lt;span&gt;Vyom Production&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Vyom Production is a creative video production</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>and editing studio focused on turning ideas</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>into powerful visual experiences.</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>From corporate films and event videos to</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>social media content, we bring creativity,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>storytelling and professional editing together.</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#contact" class="btn"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Let's Work Together</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="about-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;100+&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;Creative Projects&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;24/7&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;Creative Support&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- PORTFOLIO --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="portfolio" id="portfolio"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="section-title"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Our Portfolio&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Some of our creative work.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="portfolio-grid"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="portfolio-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Corporate Film&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="portfolio-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Event Video&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="portfolio-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Social Media Reel&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="portfolio-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Brand Video&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="portfolio-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Product Video&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="portfolio-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Creative Edit&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- CONTACT --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="contact"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="contact-container"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Let's Create Something Amazing&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Have a project in mind? Get in touch with</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Vyom Production.</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="contact-info"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;📧 your@email.com&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;📱 +91 XXXXX XXXXX&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a</p>
+<p class="p1"><span class="Apple-converted-space">                </span>href="mailto:your@email.com"</p>
+<p class="p1"><span class="Apple-converted-space">                </span>class="btn"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Get In Touch</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- FOOTER --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>© 2026 Vyom Production. All Rights Reserved.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- JAVASCRIPT --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Simple welcome message</p>
+<p class="p1"><span class="Apple-converted-space">        </span>console.log("Welcome to Vyom Production!");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Navbar background on scroll</p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.addEventListener("scroll", function () {</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const header = document.querySelector("header");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (window.scrollY &gt; 50) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>header.style.background = "#050505";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>header.style.background = "rgba(10, 10, 10, 0.95)";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
