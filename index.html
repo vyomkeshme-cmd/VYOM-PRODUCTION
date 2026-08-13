@@ -1,570 +1,1003 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Vyom Production | Creative Video Production</title>
+<title>Vyom Production | Editor Things</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #080808;
-            color: white;
-        }
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#070707;
+    color:#fff;
+    line-height:1.6;
+}
 
-        /* NAVBAR */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 20px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(8, 8, 8, 0.95);
-            border-bottom: 1px solid #222;
-            z-index: 1000;
-        }
+/* NAVBAR */
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(5,5,5,.92);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #222;
+    z-index:999;
+}
 
-        .logo {
-            font-size: 25px;
-            font-weight: bold;
-        }
+.logo{
+    font-size:25px;
+    font-weight:900;
+    letter-spacing:2px;
+}
 
-        .logo span {
-            color: #ff3b00;
-        }
+.logo span{
+    color:#ff3b00;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 15px;
-        }
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:28px;
+    font-size:14px;
+    transition:.3s;
+}
 
-        nav a:hover {
-            color: #ff3b00;
-        }
+nav a:hover{
+    color:#ff3b00;
+}
 
-        /* HERO */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 120px 7% 60px;
-            background:
-                radial-gradient(
-                    circle at 80% 40%,
-                    rgba(255, 59, 0, 0.25),
-                    transparent 35%
-                ),
-                #080808;
-        }
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:140px 7% 80px;
+    position:relative;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at 80% 35%,rgba(255,59,0,.22),transparent 32%),
+    radial-gradient(circle at 20% 80%,rgba(255,59,0,.08),transparent 25%),
+    #070707;
+}
 
-        .hero-content {
-            max-width: 850px;
-        }
+.hero-content{
+    max-width:900px;
+    position:relative;
+    z-index:2;
+}
 
-        .hero h1 {
-            font-size: clamp(50px, 8vw, 100px);
-            line-height: 1;
-            margin-bottom: 25px;
-        }
+.small-title{
+    color:#ff3b00;
+    font-size:15px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
 
-        .hero h1 span {
-            color: #ff3b00;
-        }
+.hero h1{
+    font-size:clamp(55px,9vw,115px);
+    line-height:.95;
+    font-weight:900;
+    margin-bottom:28px;
+}
 
-        .hero p {
-            color: #aaa;
-            font-size: 20px;
-            max-width: 650px;
-            margin-bottom: 35px;
-        }
+.hero h1 span{
+    color:#ff3b00;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background: #ff3b00;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-right: 10px;
-            transition: 0.3s;
-        }
+.hero p{
+    max-width:680px;
+    color:#aaa;
+    font-size:20px;
+    margin-bottom:35px;
+}
 
-        .btn:hover {
-            background: white;
-            color: black;
-            transform: translateY(-3px);
-        }
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
 
-        .btn-outline {
-            background: transparent;
-            border: 1px solid #555;
-        }
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    border-radius:5px;
+    background:#ff3b00;
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
 
-        /* SECTIONS */
-        section {
-            padding: 100px 7%;
-        }
+.btn:hover{
+    background:#fff;
+    color:#000;
+    transform:translateY(-3px);
+}
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
+.btn-outline{
+    background:transparent;
+    border:1px solid #444;
+}
 
-        .section-title h2 {
-            font-size: 45px;
-            margin-bottom: 10px;
-        }
+.btn-outline:hover{
+    border-color:#fff;
+}
 
-        .section-title p {
-            color: #888;
-        }
+/* COMMON */
+section{
+    padding:100px 7%;
+}
 
-        /* SERVICES */
-        #services {
-            background: #111;
-        }
+.section-heading{
+    text-align:center;
+    margin-bottom:60px;
+}
 
-        .services {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+.section-heading .label{
+    color:#ff3b00;
+    font-size:13px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+}
 
-        .card {
-            background: #181818;
-            padding: 35px;
-            border-radius: 10px;
-            border: 1px solid #292929;
-            transition: 0.3s;
-        }
+.section-heading h2{
+    font-size:48px;
+    margin:8px 0 12px;
+}
 
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: #ff3b00;
-        }
+.section-heading p{
+    color:#888;
+}
 
-        .card .icon {
-            font-size: 40px;
-            margin-bottom: 20px;
-        }
+/* SERVICES */
+#services{
+    background:#101010;
+}
 
-        .card h3 {
-            font-size: 23px;
-            margin-bottom: 15px;
-        }
+.services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
 
-        .card p {
-            color: #999;
-            line-height: 1.7;
-        }
+.card{
+    background:#171717;
+    border:1px solid #292929;
+    padding:35px;
+    border-radius:10px;
+    transition:.35s;
+}
 
-        /* ABOUT */
-        .about {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#ff3b00;
+}
 
-        .about h2 {
-            font-size: 50px;
-            margin-bottom: 20px;
-        }
+.icon{
+    font-size:42px;
+    margin-bottom:18px;
+}
 
-        .about h2 span {
-            color: #ff3b00;
-        }
+.card h3{
+    font-size:22px;
+    margin-bottom:12px;
+}
 
-        .about p {
-            color: #aaa;
-            margin-bottom: 18px;
-            line-height: 1.8;
-        }
+.card p{
+    color:#999;
+}
 
-        .about-box {
-            background: #151515;
-            padding: 60px;
-            text-align: center;
-            border-radius: 12px;
-            border: 1px solid #292929;
-        }
+/* ABOUT */
+.about{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:60px;
+    align-items:center;
+}
 
-        .number {
-            font-size: 60px;
-            font-weight: bold;
-            color: #ff3b00;
-        }
+.about h2{
+    font-size:48px;
+    line-height:1.1;
+    margin-bottom:22px;
+}
 
-        /* PORTFOLIO */
-        #portfolio {
-            background: #111;
-        }
+.about h2 span{
+    color:#ff3b00;
+}
 
-        .portfolio {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
+.about p{
+    color:#aaa;
+    margin-bottom:18px;
+}
 
-        .project {
-            height: 250px;
-            border-radius: 10px;
-            background: linear-gradient(135deg, #242424, #0d0d0d);
-            border: 1px solid #292929;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: 0.3s;
-        }
+.stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
 
-        .project:hover {
-            transform: scale(1.03);
-            border-color: #ff3b00;
-        }
+.stat{
+    background:#141414;
+    border:1px solid #292929;
+    padding:35px 20px;
+    text-align:center;
+    border-radius:10px;
+}
 
-        .project h3 {
-            color: #aaa;
-        }
+.stat h3{
+    font-size:48px;
+    color:#ff3b00;
+}
 
-        /* CONTACT */
-        .contact {
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-        }
+.stat p{
+    color:#999;
+}
 
-        .contact h2 {
-            font-size: 45px;
-            margin-bottom: 20px;
-        }
+/* PORTFOLIO */
+#portfolio{
+    background:#101010;
+}
 
-        .contact p {
-            color: #999;
-            margin-bottom: 25px;
-        }
+.portfolio{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
 
-        .contact-info {
-            margin: 30px 0;
-            font-size: 18px;
-        }
+.project{
+    height:260px;
+    position:relative;
+    overflow:hidden;
+    border-radius:10px;
+    border:1px solid #292929;
+    background:
+    linear-gradient(135deg,#272727,#0d0d0d);
+    display:flex;
+    align-items:flex-end;
+    padding:25px;
+    transition:.35s;
+}
 
-        .contact-info p {
-            color: white;
-            margin: 12px;
-        }
+.project:hover{
+    transform:scale(1.025);
+    border-color:#ff3b00;
+}
 
-        /* FOOTER */
-        footer {
-            padding: 30px;
-            text-align: center;
-            background: #050505;
-            border-top: 1px solid #222;
-        }
+.project::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(transparent,rgba(0,0,0,.9));
+}
 
-        footer p {
-            color: #777;
-        }
+.project-content{
+    position:relative;
+    z-index:2;
+}
 
-        /* MOBILE */
-        @media (max-width: 800px) {
+.project-content small{
+    color:#ff3b00;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
 
-            nav {
-                display: none;
-            }
+.project-content h3{
+    margin-top:5px;
+}
 
-            .hero {
-                padding: 130px 6% 70px;
-            }
+/* LOCATION */
+.location{
+    text-align:center;
+    padding:75px 7%;
+    background:#0b0b0b;
+}
 
-            .hero h1 {
-                font-size: 55px;
-            }
+.location h2{
+    font-size:35px;
+    margin-bottom:10px;
+}
 
-            .hero p {
-                font-size: 17px;
-            }
+.location p{
+    color:#999;
+}
 
-            .services,
-            .about,
-            .portfolio {
-                grid-template-columns: 1fr;
-            }
+/* CONTACT */
+.contact{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
 
-            section {
-                padding: 80px 6%;
-            }
+.contact h2{
+    font-size:48px;
+    margin-bottom:15px;
+}
 
-            .about-box {
-                padding: 40px;
-            }
-        }
-    </style>
+.contact > p{
+    color:#999;
+    margin-bottom:35px;
+}
+
+.contact-info{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-bottom:35px;
+}
+
+.contact-item{
+    background:#141414;
+    border:1px solid #292929;
+    border-radius:8px;
+    padding:20px;
+}
+
+.contact-item span{
+    display:block;
+    color:#ff3b00;
+    font-size:13px;
+    margin-bottom:5px;
+}
+
+.contact-item a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.contact-item a:hover{
+    color:#ff3b00;
+}
+
+/* SOCIAL */
+.social{
+    margin-top:40px;
+}
+
+.social a{
+    display:inline-block;
+    color:#aaa;
+    text-decoration:none;
+    margin:8px 12px;
+    transition:.3s;
+}
+
+.social a:hover{
+    color:#ff3b00;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:27px;
+    z-index:1000;
+    box-shadow:0 8px 25px rgba(0,0,0,.5);
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+
+/* FOOTER */
+footer{
+    padding:35px 7%;
+    text-align:center;
+    background:#040404;
+    border-top:1px solid #222;
+}
+
+footer .footer-logo{
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+footer .footer-logo span{
+    color:#ff3b00;
+}
+
+footer p{
+    color:#666;
+    font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:850px){
+
+    header{
+        padding:16px 5%;
+    }
+
+    nav{
+        display:none;
+    }
+
+    section{
+        padding:80px 5%;
+    }
+
+    .hero{
+        padding:130px 5% 80px;
+    }
+
+    .hero h1{
+        font-size:58px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .services,
+    .portfolio,
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .section-heading h2,
+    .about h2,
+    .contact h2{
+        font-size:38px;
+    }
+
+    .contact-info{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:500px){
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .whatsapp{
+        right:18px;
+        bottom:18px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
-    <header>
+<!-- NAVIGATION -->
+<header>
 
-        <div class="logo">
-            Vyom <span>Production</span>
+    <div class="logo">
+        VYOM <span>PRODUCTION</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            Editor Things
         </div>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <h1>
+            WE CREATE<br>
+            <span>VISUAL STORIES.</span>
+        </h1>
 
-    </header>
+        <p>
+            Professional video editing, creative content,
+            corporate films, event videos and digital media
+            solutions crafted by Vyom Production.
+        </p>
 
-
-    <!-- HERO -->
-    <section class="hero" id="home">
-
-        <div class="hero-content">
-
-            <h1>
-                We Create<br>
-                <span>Visual Stories.</span>
-            </h1>
-
-            <p>
-                Professional video editing, creative content,
-                corporate films and digital media solutions.
-            </p>
+        <div class="buttons">
 
             <a href="#portfolio" class="btn">
                 View Portfolio
             </a>
 
-            <a href="#contact" class="btn btn-outline">
-                Contact Us
+            <a href="https://wa.me/917607775105"
+               target="_blank"
+               class="btn btn-outline">
+                WhatsApp Us
             </a>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- SERVICES -->
-    <section id="services">
+<!-- SERVICES -->
+<section id="services">
 
-        <div class="section-title">
+    <div class="section-heading">
 
-            <h2>Our Services</h2>
+        <div class="label">What We Do</div>
+
+        <h2>Our Services</h2>
+
+        <p>
+            Creative solutions designed to make your content stand out.
+        </p>
+
+    </div>
+
+
+    <div class="services">
+
+        <div class="card">
+
+            <div class="icon">🎬</div>
+
+            <h3>Video Editing</h3>
 
             <p>
-                Creative solutions for powerful visual content.
+                Professional editing for corporate films,
+                events, YouTube videos, reels and digital content.
             </p>
 
         </div>
 
 
-        <div class="services">
+        <div class="card">
 
-            <div class="card">
+            <div class="icon">🎥</div>
 
-                <div class="icon">🎬</div>
+            <h3>Corporate Films</h3>
 
-                <h3>Video Editing</h3>
+            <p>
+                Powerful corporate videos and brand films
+                designed to communicate your story effectively.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">📱</div>
+
+            <h3>Social Media</h3>
+
+            <p>
+                Engaging reels, shorts and social media videos
+                created for modern digital audiences.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">✨</div>
+
+            <h3>Motion Graphics</h3>
+
+            <p>
+                Dynamic titles, transitions, graphics and
+                visual effects that bring your videos to life.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🎞️</div>
+
+            <h3>Event Videos</h3>
+
+            <p>
+                Professional event coverage and highlight
+                films that capture memorable moments.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🎨</div>
+
+            <h3>Creative Content</h3>
+
+            <p>
+                Unique visual content tailored to your
+                brand, campaign or creative requirements.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+    <div class="about">
+
+        <div>
+
+            <div class="small-title">
+                About Us
+            </div>
+
+            <h2>
+                We Turn Ideas Into
+                <span>Visual Stories.</span>
+            </h2>
+
+            <p>
+                Vyom Production is a creative video production
+                and editing studio based in Ayodhya and Noida,
+                focused on turning ideas into impactful visual stories.
+            </p>
+
+            <p>
+                From corporate films and event videos to social
+                media content and creative edits, we combine
+                professional editing with fresh storytelling to
+                bring every project to life.
+            </p>
+
+            <a href="#contact" class="btn">
+                Let's Work Together
+            </a>
+
+        </div>
+
+
+        <div class="stats">
+
+            <div class="stat">
+
+                <h3>100+</h3>
 
                 <p>
-                    Professional editing for corporate videos,
-                    events, YouTube, reels and social media content.
+                    Creative Projects
                 </p>
 
             </div>
 
 
-            <div class="card">
+            <div class="stat">
 
-                <div class="icon">🎥</div>
-
-                <h3>Corporate Videos</h3>
+                <h3>2</h3>
 
                 <p>
-                    Engaging corporate films, promotional videos
-                    and brand communication content.
+                    Locations
                 </p>
 
             </div>
 
 
-            <div class="card">
+            <div class="stat">
 
-                <div class="icon">📱</div>
-
-                <h3>Social Media</h3>
+                <h3>24/7</h3>
 
                 <p>
-                    Reels, shorts, promotional videos and
-                    creative social media content.
+                    Creative Support
+                </p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <h3>∞</h3>
+
+                <p>
+                    Creative Ideas
                 </p>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ABOUT -->
-    <section id="about">
+<!-- PORTFOLIO -->
+<section id="portfolio">
 
-        <div class="about">
+    <div class="section-heading">
 
-            <div>
+        <div class="label">Selected Work</div>
 
-                <h2>
-                    About <span>Vyom Production</span>
-                </h2>
+        <h2>Our Portfolio</h2>
 
-                <p>
-                    Vyom Production is a creative video production
-                    and editing studio focused on turning ideas
-                    into powerful visual experiences.
-                </p>
+        <p>
+            A preview of the creative work we deliver.
+        </p>
 
-                <p>
-                    We combine storytelling, creativity and
-                    professional editing to create content
-                    that connects with audiences.
-                </p>
+    </div>
 
-                <a href="#contact" class="btn">
-                    Let's Work Together
+
+    <div class="portfolio">
+
+        <div class="project">
+
+            <div class="project-content">
+
+                <small>01 • Corporate</small>
+
+                <h3>Corporate Film</h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="project">
+
+            <div class="project-content">
+
+                <small>02 • Events</small>
+
+                <h3>Event Highlight</h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="project">
+
+            <div class="project-content">
+
+                <small>03 • Social</small>
+
+                <h3>Social Media Reel</h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="project">
+
+            <div class="project-content">
+
+                <small>04 • Brand</small>
+
+                <h3>Brand Video</h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="project">
+
+            <div class="project-content">
+
+                <small>05 • Motion</small>
+
+                <h3>Motion Graphics</h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="project">
+
+            <div class="project-content">
+
+                <small>06 • Creative</small>
+
+                <h3>Creative Edit</h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LOCATION -->
+<section class="location">
+
+    <h2>Ayodhya • Noida</h2>
+
+    <p>
+        Creating visual stories across locations.
+    </p>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <div class="contact">
+
+        <div class="section-heading">
+
+            <div class="label">Get In Touch</div>
+
+            <h2>Let's Create Something Amazing.</h2>
+
+            <p>
+                Have a project in mind? Let's talk about it.
+            </p>
+
+        </div>
+
+
+        <div class="contact-info">
+
+            <div class="contact-item">
+
+                <span>PHONE</span>
+
+                <a href="tel:+917607775105">
+                    +91 76077 75105
                 </a>
 
             </div>
 
 
-            <div class="about-box">
+            <div class="contact-item">
 
-                <div class="number">100+</div>
+                <span>WHATSAPP</span>
 
-                <p>Creative Projects</p>
+                <a href="https://wa.me/917607775105"
+                   target="_blank">
+                    Chat on WhatsApp
+                </a>
 
-                <br>
+            </div>
 
-                <div class="number">24/7</div>
 
-                <p>Creative Support</p>
+            <div class="contact-item">
+
+                <span>EMAIL</span>
+
+                <a href="mailto:vyomkeshme@gmail.com">
+                    vyomkeshme@gmail.com
+                </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <span>ADDRESS</span>
+
+                <span style="color:#fff;">
+                    Meerapur Dera Bi Bi,<br>
+                    19/2/19, PIN 224123
+                </span>
 
             </div>
 
         </div>
 
-    </section>
+
+        <a href="mailto:vyomkeshme@gmail.com"
+           class="btn">
+            Send Email
+        </a>
 
 
-    <!-- PORTFOLIO -->
-    <section id="portfolio">
+        <!-- SOCIAL LINKS -->
+        <div class="social">
 
-        <div class="section-title">
+            <a href="https://www.instagram.com/vyomk_bhardwaj"
+               target="_blank">
+                Instagram
+            </a>
 
-            <h2>Our Portfolio</h2>
+            <a href="https://www.youtube.com/@VyomProduction"
+               target="_blank">
+                YouTube
+            </a>
 
-            <p>
-                Some of our creative work.
-            </p>
+            <a href="https://www.facebook.com/Vyom.Kesh.Bhardwaj"
+               target="_blank">
+                Facebook
+            </a>
 
-        </div>
+            <a href="https://x.com/VyomK_Bhardwaj"
+               target="_blank">
+                X / Twitter
+            </a>
 
-
-        <div class="portfolio">
-
-            <div class="project">
-                <h3>Corporate Film</h3>
-            </div>
-
-            <div class="project">
-                <h3>Event Video</h3>
-            </div>
-
-            <div class="project">
-                <h3>Social Media Reel</h3>
-            </div>
-
-            <div class="project">
-                <h3>Brand Video</h3>
-            </div>
-
-            <div class="project">
-                <h3>Product Video</h3>
-            </div>
-
-            <div class="project">
-                <h3>Creative Edit</h3>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-    <section id="contact">
-
-        <div class="contact">
-
-            <h2>
-                Let's Create Something Amazing
-            </h2>
-
-            <p>
-                Have a project in mind?
-                Get in touch with Vyom Production.
-            </p>
-
-
-            <div class="contact-info">
-
-                <!-- Yahan apna email aur phone number daalna -->
-
-                <p>📧 your@email.com</p>
-
-                <p>📱 +91 XXXXX XXXXX</p>
-
-            </div>
-
-
-            <a
-                href="mailto:your@email.com"
-                class="btn"
-            >
-                Get In Touch
+            <a href="https://www.linkedin.com/in/vyomproduction/"
+               target="_blank">
+                LinkedIn
             </a>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- FOOTER -->
-    <footer>
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/917607775105"
+   target="_blank"
+   class="whatsapp"
+   title="Chat on WhatsApp">
+    💬
+</a>
 
-        <p>
-            © 2026 Vyom Production. All Rights Reserved.
-        </p>
 
-    </footer>
+<!-- FOOTER -->
+<footer>
 
+    <div class="footer-logo">
+        VYOM <span>PRODUCTION</span>
+    </div>
+
+    <p>
+        Editor Things • Ayodhya • Noida
+    </p>
+
+    <p>
+        © 2026 Vyom Production. All Rights Reserved.
+    </p>
+
+</footer>
 
 </body>
 </html>
+```
